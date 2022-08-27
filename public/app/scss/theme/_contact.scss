@@ -1,0 +1,89 @@
+/* =================================== */
+/*  Contact Page Styles
+/* =================================== */
+
+.contact-page-area {
+    .contact-wrap{
+        background: $white;
+        padding:20px;
+    }
+    .map-wrap {
+        margin-bottom:40px;
+    }
+    .contact-btns {
+        font-size: 18px;
+        font-weight: 600;
+        text-align: center;
+        padding: 40px;
+        color: $white;
+        margin-bottom: 30px;
+        &:hover {
+            color: $white;
+        }
+    }
+    .form-area {
+        .form-control{
+            &:focus{
+                box-shadow: none!important;
+                border-color:#ced4da!important;
+            }
+        }
+        input {
+            padding: 12px;
+        }
+        input,
+        textarea {
+            border-radius: 0;
+            font-size: 13px!important;
+        }
+        textarea {
+            height: 176px;
+            margin-top: 0px;
+            padding: 15px;
+        }
+        .primary-btn {
+            @include transition();
+            border-radius: 0!important;
+            background:$primary-color;
+            color:$white;
+            font-size: 14px;
+            border: 1px solid $primary-color;            
+            text-transform: uppercase!important;
+            &:hover {
+                background:transparent;
+                border: 1px solid $primary-color;
+                color: $primary-color;
+            }
+            @media(max-width: 991px){
+                margin-top: 20px;
+            }
+        }
+    }
+    .address-wrap{
+        @media(max-width:991px){
+            margin-bottom:30px;
+        }
+        .single-contact-address {
+            margin-bottom: 8px;
+            h5 {
+                font-weight: 300;
+                font-size: 16px;
+                margin-bottom: 5px;
+            }
+            .lnr {
+                font-size: 30px;
+                font-weight: 500;
+                color: $primary-color;
+                margin-right: 30px;
+            }
+            @media(max-width:1024px) and (min-width:990px){
+                h5{
+                    font-size:14px;
+                }
+                p{
+                    font-size:10px;
+                }
+            }
+        }
+    }
+}

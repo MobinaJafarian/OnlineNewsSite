@@ -1,0 +1,43 @@
+/* =================================== */
+/*  Archive Page Styles
+/* =================================== */
+
+.hero-nav-area{
+    text-align:center;
+    background:$primary-color;
+    color:$white;
+    padding:65px 0px; 
+    h1{
+        font-size:48px;
+        margin-bottom:20px;
+        @media(max-width:413px){
+            font-size:36px;
+        }
+    }
+    p{
+        .lnr{
+            font-size:14px;
+            font-weight:700;
+            padding:0px 8px;
+        }
+        a{
+            padding:0px 8px;
+            color:$white;
+        }
+    }
+}
+
+
+.load-more{
+    text-align:center;
+    margin-top:30px;
+    .primary-btn{
+        background:#ecf0f1;
+        color:$black;
+        &:hover{
+            color:$white;
+            background:$primary-color;
+        }
+    }
+}
+

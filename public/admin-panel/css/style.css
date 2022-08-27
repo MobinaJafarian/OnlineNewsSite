@@ -1,0 +1,84 @@
+.bg-gradiant-green-blue{
+    background: rgb(0,168,249);
+    background: linear-gradient(61deg, rgba(0,168,249,1) 0%, rgba(0,255,179,1) 100%);
+}
+.btn-blue{
+    background-color: rgba(0,168,249,1);
+}
+.btn-green{
+    background-color: rgba(0,255,179,1);
+}
+
+.nav-shadow{
+    box-shadow: 0 2px 5px 0 rgba(0,0,0,.16), 0 2px 10px 0 rgba(0,0,0,.12);
+}
+.bg-sidebar{
+    background-color: rgba(0,0,0,1);
+}
+
+.sidebar{
+    min-height: calc(100vh - 56px);
+}
+
+.bg-content{
+    background-color: #fff3cd;
+}
+.bg-sidebar>a{
+    border-left: 3px solid rgba(0,0,0,1);
+    font-size: 15px;
+    /*color: rgb(0,168,249);*/
+    color: rgb(255,255,255);
+}
+.bg-sidebar>a>i{
+    color: rgb(0,168,249);
+    /*color: rgb(255,255,255);*/
+}
+.bg-sidebar a:hover{
+    border-left: 3px solid rgb(0, 89, 249);
+    color: #ffffff;
+    text-shadow:
+            0 0 2px rgb(255,255,255),
+            0 0 5px rgb(150,205,253),
+            0 0 10px rgb(0,168,249);
+    transition: all 0.3s;
+    transition: all 0.3s;
+}
+.bg-sidebar>a:hover>i{
+    color: rgb(255,255,255);
+}
+
+
+.bg-juicy-orange{
+    background: #FF8008;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #FFC837, #FF8008);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #FFC837, #FF8008); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+}
+.bg-dracula{
+    background: #f857a6;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #ff5858, #f857a6);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #ff5858, #f857a6); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+
+
+}
+.bg-neon-life{
+    background: #00c6ff;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #0072ff, #00c6ff);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #0072ff, #00c6ff); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+
+.bg-auth-form {
+    background: #FF512F; /* fallback for old browsers */
+    background: -webkit-linear-gradient(to left, #DD2476, #FF512F); /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to left, #DD2476, #FF512F); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+    height: 100vh;
+}
+
+
+
+.font-12{
+    font-size: 12px!important;
+}

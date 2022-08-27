@@ -1,0 +1,72 @@
+/* =================================== */
+/*  Footer Styles
+/* =================================== */
+
+.footer-area{
+    background:#04091e;
+    .single-footer-widget{
+        @media(max-width:991px){
+            margin-bottom:30px;
+        }
+        h4{
+            color:$white;
+            margin-bottom:35px;
+        }
+        ul{
+            li{
+                margin-bottom:15px;
+                a{
+                    @include transition();
+                    color:$text-color;
+                    &:hover{
+                        color:$white;
+                    }
+                }
+            }
+        }
+        .instafeed {
+            margin: -5px;
+            li {
+                overflow: hidden;
+                width: 25%;
+                img {
+                    margin: 5px;
+                }
+            }
+        }
+
+    }
+    .footer-bottom{
+        margin-top:90px;
+        p{
+            color:$white;
+        }
+        a,span{
+            color:$primary-color;
+        }
+        span{
+            font-weight: 700;
+        }
+        .footer-social{
+            text-align: right;
+            @media(max-width: 991px){
+                text-align:left;
+                margin-top:30px;
+            }
+            a{
+                background: rgba(#fff, .1);
+                margin-left: 5px;
+                width: 40px;
+                color:$white;
+                display: inline-grid;
+                text-align: center;
+                height: 40px;
+                align-content: center; 
+                @include transition();
+                &:hover{
+                    background:$primary-color;
+                }              
+            }
+        }
+    }
+}
