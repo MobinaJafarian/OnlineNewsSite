@@ -8,9 +8,9 @@ session_start();
 //configuration
 
 define('BASE_PATH', __DIR__);
-define('CURRENT_DOMAIN', current_domain() . '/news-project/');
+define('CURRENT_DOMAIN', current_domain() . '/NewsProject/');
 define('DB_HOST', 'localhost');
-define('DB_NAME', 'project');
+define('DB_NAME', 'news-project');
 define('DB_USERNAME', 'root');
 define('DB_PASSWORD', '');
 define('DISPLAY_ERROR', true);
@@ -19,11 +19,11 @@ define('DISPLAY_ERROR', true);
 //mail config
 define('MAIL_HOST', 'smtp.gmail.com');
 define('SMTP_AUTH', true);
-define('MAIL_USERNAME', 'onlinephp.attendance@gmail.com');
-define('MAIL_PASSWORD', 'hasaan@#!ljk((#*$U&*jn&$#n322jn&');
+define('MAIL_USERNAME', '');
+define('MAIL_PASSWORD', '');
 define('MAIL_PORT', 587);
-define('SENDER_MAIL', 'onlinephp.attendance@gmail.com');
-define('SENDER_NAME', 'دوره حضوری و انلاین PHP');
+define('SENDER_MAIL', '');
+define('SENDER_NAME', 'Mobina nj');
 
 
 
