@@ -8,9 +8,9 @@ session_start();
 //configuration
 
 define('BASE_PATH', __DIR__);
-define('CURRENT_DOMAIN', current_domain() . '/news-project/');
+define('CURRENT_DOMAIN', current_domain() . '/NewsProject/');
 define('DB_HOST', 'localhost');
-define('DB_NAME', 'project');
+define('DB_NAME', 'news-project');
 define('DB_USERNAME', 'root');
 define('DB_PASSWORD', '');
 define('DISPLAY_ERROR', true);
@@ -19,11 +19,11 @@ define('DISPLAY_ERROR', true);
 //mail config
 define('MAIL_HOST', 'smtp.gmail.com');
 define('SMTP_AUTH', true);
-define('MAIL_USERNAME', 'onlinephp.attendance@gmail.com');
-define('MAIL_PASSWORD', 'hasaan@#!ljk((#*$U&*jn&$#n322jn&');
+define('MAIL_USERNAME', '');
+define('MAIL_PASSWORD', '');
 define('MAIL_PORT', 587);
-define('SENDER_MAIL', 'onlinephp.attendance@gmail.com');
-define('SENDER_NAME', 'دوره حضوری و انلاین PHP');
+define('SENDER_MAIL', '');
+define('SENDER_NAME', 'Mobina nj');
 
 
 
@@ -31,22 +31,18 @@ define('SENDER_NAME', 'دوره حضوری و انلاین PHP');
 require_once 'database/Database.php';
 require_once 'database/CreateDB.php';
 
-// $db = new Database\Database();
-
-// $db = new CreateDB();
-// $db->run();
 
 
 //admin
 require_once 'activities/Admin/Admin.php';
 require_once 'activities/Admin/Category.php';
-require_once ("activities/Admin/Dashboard.php");
+require_once 'activities/Admin/Dashboard.php';
 require_once 'activities/Admin/Post.php';
 require_once 'activities/Admin/Banner.php';
 require_once 'activities/Admin/User.php';
 require_once 'activities/Admin/Comment.php';
 require_once 'activities/Admin/Menu.php';
-require_once ("activities/Admin/WebSetting.php");
+require_once 'activities/Admin/WebSetting.php';
 
 
 
@@ -56,8 +52,6 @@ require_once 'activities/Auth/Auth.php';
 
 //Home
 require_once ("activities/Home.php");
-
-
 
 
 
@@ -76,7 +70,7 @@ spl_autoload_register(function($className){
 
 function jalaliDate($date)
 {
-        return jDate::forge($date)->format('%A, %d %B %y');
+        return jDate::forge($date)->format('%A, %d %B %Y');
 }
 
 
@@ -137,9 +131,6 @@ function uri($reservedUrl, $class, $method, $requestMethod = "GET")
 
         $object = new $class;
         call_user_func_array(array($object, $method), $parameters);
-        // Category
-        // $category = new Category;
-        // $category->index();
         exit;
 }
 
@@ -187,7 +178,7 @@ function dd($vars){
 
 }
 
-// dd('hi');
+
 
 function displayError($displayError){
 
@@ -231,12 +222,6 @@ function flash($name, $value = null)
         
 }
 
-// flash('cart', 'محصول با موفقیت به سبد خرید شما اضافه شد');
-// flash('register', 'ثبت نام شما با موفقیت انجام شد');
-// echo flash('cart');
-// echo flash('register');
-// flash('hasaan');
-// flash('cart', 'محصول با موفقیت به سبد خرید شما اضافه شد');
 
 
 //dashboard

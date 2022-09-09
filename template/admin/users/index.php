@@ -24,9 +24,9 @@
                 </tr>
             </thead>
             <tbody>
-                <?php foreach ($users as $user) { ?>
+                <?php foreach ($users as $key => $user) { ?>
                 <tr>
-                    <td><?= $user['id'] ?></td>
+                    <td><?= $key += 1 ?></td>
                     <td><?= $user['username'] ?></td>
                     <td><?= $user['email'] ?></td>
                     <td><?= $user['permission'] ?></td>

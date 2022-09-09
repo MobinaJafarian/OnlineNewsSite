@@ -25,18 +25,11 @@
             </thead>
             <tbody>
 
-            <?php foreach ($banners as $banner) { ?>
+            <?php foreach ($banners as $key => $banner) { ?>
                 <tr>
-                    <td>
-                        <?= $banner['id'] ?>
-                </td>
-                    <td>
-                    <?= $banner['url'] ?>
-
-                </td>
-                <td>
-                            <img style="width: 80px;" src="<?= asset($banner['image']) ?>" alt="">
-                </td>
+                    <td><?= $key += 1 ?></td>
+                    <td><?= $banner['url'] ?></td>
+                    <td><img style="width: 80px;" src="<?= asset($banner['image']) ?>" alt=""></td>
                     <td>
                         <a role="button" class="btn btn-sm btn-primary text-white" href="<?= asset('admin/banner/edit/' . $banner['id']) ?>">edit</a>
                         <a role="button" class="btn btn-sm btn-danger text-white" href="<?= asset('admin/banner/delete/' . $banner['id']) ?>">delete</a>

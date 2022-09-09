@@ -1,7 +1,6 @@
 <?php 
         require_once(BASE_PATH . '/template/app/layouts/header.php');
    ?>
-
     <div class="site-main-container">
         <!-- Start top-post Area -->
         <!-- End top-post Area -->

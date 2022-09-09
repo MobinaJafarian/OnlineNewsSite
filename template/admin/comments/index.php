@@ -25,9 +25,9 @@
                 </tr>
             </thead>
             <tbody>
-                <?php foreach ($comments as $comment) { ?>
+                <?php foreach ($comments as $key => $comment) { ?>
                 <tr>
-                    <td><a href=""><?= $comment['id'] ?></a>
+                    <td><a href=""><?= $key += 1 ?></a>
                 </td>
                 <td>
                 <?= $comment['email'] ?>
