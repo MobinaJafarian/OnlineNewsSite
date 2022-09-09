@@ -25,10 +25,10 @@
             </thead>
             <tbody>
              
-            <?php foreach ($menus as $menu) { ?>
+            <?php foreach ($menus as $key => $menu) { ?>
                 <tr>
                     <td>
-                      <?= $menu['id'] ?>
+                      <?= $key += 1 ?>
                     </td>
                     <td>
                     <?= $menu['name'] ?>

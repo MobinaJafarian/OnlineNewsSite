@@ -6,8 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <!-- Favicon-->
     <link rel="shortcut icon" href="<?= asset($setting['icon']) ?>">
-    <!-- Author Meta -->
-    <meta name="author" content="colorlib">
     <!-- Meta Description -->
     <meta name="description" content="<?= $setting['description'] ?>">
     <!-- Meta Keyword -->
@@ -37,18 +35,18 @@
         <div class="header-top">
             <div class="container">
                 <div class="row">
-                    <div class="col-lg-6 col-md-6 col-sm-6 col-6 header-top-left no-padding">
+                    <!-- <div class="col-lg-6 col-md-6 col-sm-6 col-6 header-top-left no-padding">
                         <ul>
                             <li><a href="#"><i class="fa fa-facebook"></i></a></li>
                             <li><a href="#"><i class="fa fa-twitter"></i></a></li>
                             <li><a href="#"><i class="fa fa-dribbble"></i></a></li>
                             <li><a href="#"><i class="fa fa-behance"></i></a></li>
                         </ul>
-                    </div>
-                    <div class="col-lg-6 col-md-6 col-sm-6 col-6 header-top-right no-padding">
+                    </div> -->
+                    <div class="col-lg-6 col-md-6 col-sm-6 col-6 header-top-left no-padding">
                         <ul>
-                            <li><a href="tel:+440 012 3654 896"><span class="lnr lnr-phone-handset"></span><span>+440 012 3654 896</span></a></li>
-                            <li><a href="mailto:support@colorlib.com"><span class="lnr lnr-envelope"></span><span>support@colorlib.com</span></a></li>
+                            <li><a href=""><span class="lnr lnr-phone-handset"></span><span>  0903 958 2466</span></a></li>
+                            <li><a href=""><span class="lnr lnr-envelope"></span><span>  nimobina99@gmail.com</span></a></li>
                         </ul>
                     </div>
                 </div>
@@ -58,12 +56,12 @@
             <div class="container">
                 <div class="row justify-content-between align-items-center">
                     <div class="col-lg-4 col-md-4 col-sm-12 logo-left no-padding">
-                        <a href="index.html">
+                        <a href="http://localhost/NewsProject/">
                             <img class="img-fluid" src="<?= asset($setting['logo']) ?>" alt="">
                         </a>
                     </div>
                     <div class="col-lg-8 col-md-8 col-sm-12 logo-right no-padding ads-banner">
-                        <img class="img-fluid" src="img/banner-ad.jpg" alt="">
+                        <img class="img-fluid" src="<?= asset($bodyBanner['image']) ?>" alt="">
                     </div>
                 </div>
             </div>

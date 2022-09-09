@@ -19,12 +19,12 @@
                             <li><a href="<?= url('show-category/' . $topSelectedPosts[0]['cat_id']) ?>"><?= $topSelectedPosts[0]['category'] ?></a></li>
                             </ul>
                             <a href="<?= url('show-post/' . $topSelectedPosts[0]['id']) ?>">
-                                <h3><?= $topSelectedPosts[0]['title'] ?></h3>
+                                <h3 style="color: black;"><?= $topSelectedPosts[0]['title'] ?></h3>
                             </a>
                             <ul class="meta">
-                                <li><a href="#"><span class="lnr lnr-user"></span><?= $topSelectedPosts[0]['username'] ?></a></li>
-                                <li><a href="#"><?= jalaliDate($topSelectedPosts[0]['created_at'])  ?><span class="lnr lnr-calendar-full"></span></a></li>
-                                <li><a href="#"><?= $topSelectedPosts[0]['comments_count'] ?><span class="lnr lnr-bubble"></span></a></li>
+                                <li><a href="#" style="color: black;"><span class="lnr lnr-user" style="color: black;"></span><?= $topSelectedPosts[0]['username'] ?></a></li>
+                                <li><a href="#" style="color: black;"><?= jalaliDate($topSelectedPosts[0]['created_at'])  ?><span class="lnr lnr-calendar-full" style="color: black;"></span></a></li>
+                                <li><a href="#" style="color: black;"><?= $topSelectedPosts[0]['comments_count'] ?><span class="lnr lnr-bubble" style="color: black;"></span></a></li>
                             </ul>
                         </div>
                         <?php } ?>

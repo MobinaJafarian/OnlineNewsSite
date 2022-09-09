@@ -28,8 +28,7 @@ class Admin{
         }
 
 
-        // saveImage($_FILES['image'], 'post-image', 'logo');
-        // saveImage($_FILES['image'], 'post-image');
+        
         protected function saveImage($image, $imagePath, $imageName = null)
         {
 
@@ -63,7 +62,7 @@ class Admin{
         }
 
 
-        // removeImage('/public/image/hassan.png/');
+        
         protected function removeImage($path)
         {
                 // $path = trim($this->basePath, '/ ') . '/' . trim($path, '/ ');

@@ -22,10 +22,10 @@
                 </tr>
             </thead>
             <tbody>
-                <?php foreach ($categories as $category) { ?>
+                <?php foreach ($categories as $key => $category) { ?>
                 <tr>
                     <td>
-                        <?= $category['id'] ?>
+                        <?= $key += 1 ?>
                     </td>
                     <td>
                     <?= $category['name'] ?>

@@ -28,33 +28,33 @@
             </thead>
             <tbody>
 
-            <?php foreach ($posts as $post) { ?>
+            <?php foreach ($posts as $key => $post) { ?>
               
                 <tr>
                     <td>
-               <?= $post['id'] ?>
+                        <?= $key += 1 ?>
                     </td>
                     <td>
-                    <?= $post['title'] ?>
+                        <?= $post['title'] ?>
                     <td>
-                    <?= $post['summary'] ?>
-                </td>
+                        <?= $post['summary'] ?>
+                    </td>
                     <td>
-                    <?= $post['view'] ?>
+                        <?= $post['view'] ?>
                     </td>
                     <td>
                         <?php if($post['breaking_news'] == 2) { ?>
-                      <span class="badge badge-success">#breaking_news</span>
+                            <span class="badge badge-success">#breaking_news</span>
                         <?php }
                         if($post['selected'] == 2) { ?>
-                      <span class="badge badge-dark">#editor_selected</span>
-                      <?php } ?>
+                            <span class="badge badge-dark">#editor_selected</span>
+                        <?php } ?>
                     </td>
                     <td>
-                    <?= $post['user_id'] ?>
+                        <?= $post['user_id'] ?>
                     </td>
                     <td>
-                    <?= $post['cat_id'] ?>
+                        <?= $post['cat_id'] ?>
                     </td>
                     <td>
                             <img style="width: 80px;" src="<?= asset($post['image']) ?>" alt="">

@@ -30,8 +30,8 @@ require_once BASE_PATH . '/template/admin/layouts/head-tag.php';
 
                     <?php foreach($menus as $menu) { ?>
                         <option value="<?= $menu['id'] ?>">
-             <?= $menu['name'] ?>
-                    </option>
+                                <?= $menu['name'] ?>
+                        </option>
                     <?php } ?>
                   
 

@@ -30,15 +30,15 @@ class Auth{
                 return bin2hex(openssl_random_pseudo_bytes(32));
         }
 
-        public function activationMessage($username, $verifyToken)
-        {
-                $message = '
-                <h1>فعال سازی حساب کاربری</h1>
-                <p>' . $username . 'عزیز برای فعال سازی حساب کاربری خود لطفا روی لینک زیر کلیک نمایید</p>
-                <div><a href="'. url('activation/' . $verifyToken) .'">فعال سازی حساب کاربری</a></div>
-                ';
-                return $message;
-        }
+//         public function activationMessage($username, $verifyToken)
+//         {
+//                 $message = '
+//                 <h1>فعال سازی حساب کاربری</h1>
+//                 <p>' . $username . 'عزیز برای فعال سازی حساب کاربری خود لطفا روی لینک زیر کلیک نمایید</p>
+//                 <div><a href="'. url('activation/' . $verifyToken) .'">فعال سازی حساب کاربری</a></div>
+//                 ';
+//                 return $message;
+//         }
 
         public function sendMail($emailAddress, $subject, $body)
         {
@@ -108,20 +108,21 @@ try {
                      }
                      else{
                              $randomToken = $this->random();
-                             $activationMessage = $this->activationMessage($request['username'], $randomToken);
-                             $result = $this->sendMail($request['email'], 'فعال سازی حساب کاربری', $activationMessage);
-                             if($result)
-                             {
+                        //      $activationMessage = $this->activationMessage($request['username'], $randomToken);
+                        //      $result = $this->sendMail($request['email'], 'فعال سازی حساب کاربری', $activationMessage);
+                        //      if($result)
+                        //      {
                                      $request['verify_token'] = $randomToken;
                                      $request['password'] = $this->hash($request['password']);
                                      $db->insert('users', array_keys($request), $request);
                                      $this->redirect('login');
-                             }
-                             else{
-                                flash('register_error', 'ایمیل فعال سازی ارسال نشد');
-                                $this->redirectBack();    
-                             }
+                        //      }
+                             
                      }
+                     
+                        // flash('register_error', 'ایمیل فعال سازی ارسال نشد');
+                        $this->redirectBack();    
+                     
 
                }
         }

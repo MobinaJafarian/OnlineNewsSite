@@ -27,21 +27,26 @@ require_once(BASE_PATH . "/template/admin/layouts/head-tag.php");
 
 
            <div class="form-group">
-           <?php if($setting !=null){ ?>
-                    <img style="width: 100px;" src="<?= asset($setting['logo']); ?>" alt="" >
-                <hr/>
-                <?php } ?>
+           
                 <label for="logo">Logo</label>
                 <input type="file" id="logo" name="logo" class="form-control-file" autofocus>
+
+                <?php if($setting !=null){ ?>
+                    <img style="width: 100px;" src="<?= asset($setting['logo']); ?>" alt="" >
+                    <hr/>
+                <?php } ?>
+
             </div>
 
             <div class="form-group">
-            <?php if($setting !=null){ ?>
-                    <img style="width: 100px;" src="<?= asset($setting['icon']); ?>" alt="" >
-                <hr/>
-                <?php } ?>
+            
                 <label for="icon">Icon</label>
                 <input type="file" id="icon" name="icon" class="form-control-file" autofocus>
+
+                <?php if($setting !=null){ ?>
+                    <img style="width: 100px;" src="<?= asset($setting['icon']); ?>" alt="" >
+                    <hr/>
+                <?php } ?>
             </div>
 
             <button type="submit" class="btn btn-primary btn-sm">set</button>
