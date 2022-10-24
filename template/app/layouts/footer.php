@@ -2,20 +2,27 @@
    <footer class="footer-area section-gap">
         <div class="container">
             <div class="row">
-                <div class="col-lg-6 col-md-6 single-footer-widget">
-                    <h4>اخبار پربازدید</h4>
+                <div class="col-lg-4 col-md-4 single-footer-widget text-left">
+                    <h4>Popular News</h4>
                     <ul>
                         <?php foreach ($popularPosts as $popularPost) { ?>
                         <li><a href="<?= url('show-post/' . $popularPost['id']) ?>"><?= $popularPost['title'] ?></a></li>
                         <?php } ?>
                     </ul>
                 </div>
-                <div class="col-lg-6 col-md-6 single-footer-widget">
-                    <h4>لینک سریع</h4>
+                <div class="col-lg-4 col-md-4 single-footer-widget text-left">
+                    <h4>quick link</h4>
                     <ul>
                         <?php foreach ($menus as $menu) { ?>
                         <li><a href="<?= $menu['url'] ?>"><?= $menu['name'] ?></a></li>
                         <?php } ?>
+                    </ul>
+                </div>
+                <div class="col-lg-4 col-md-4 single-footer-widget text-left">
+                    <h4>Contact us</h4>
+                    <ul>
+                            <li><a href=""><span class="lnr lnr-phone-handset"></span><span>  0903 958 2466</span></a></li>
+                            <li><a href=""><span class="lnr lnr-envelope"></span><span>  nimobina99@gmail.com</span></a></li>
                     </ul>
                 </div>
             </div>

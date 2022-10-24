@@ -26,7 +26,7 @@ require_once BASE_PATH . '/template/admin/layouts/head-tag.php';
                                 <label for="parent_id">parent ID</label>
                                 <select name="parent_id" id="parent_id" class="form-control" autofocus>
 
-                                        <option value="" <?php if($menu['parent_id'] == '') echo 'selected' ?>>root</option>
+                                        <option value="" <?php if($menu['parent_id'] == '') echo 'selected' ?>>main menu</option>
 
                                         <?php foreach($menus as $selectMenu) { ?>
                                                 <?php if ($menu['id'] != $selectMenu['id']) { ?>
