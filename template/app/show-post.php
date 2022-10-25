@@ -15,16 +15,16 @@
                                 <div class="overlay overlay-bg"></div>
                                 <img class="img-fluid" src="<?= asset($post['image']) ?>" alt="">
                             </div>
-                            <div class="content-wrap">
+                            <div class="content-wrap post-left text-left"">
                                 <ul class="tags mt-10">
-                                    <li><a href="#"><?= $post['category'] ?></a></li>
+                                    <li><a href="<?= url('show-category/' . $post['cat_id']) ?>"><?= $post['category'] ?></a></li>
                                 </ul>
                                 <a href="#">
                                     <h3><?= $post['title'] ?></h3>
                                 </a>
                                 <ul class="meta pb-20">
                                     <li><a href="#"><span class="lnr lnr-user"></span><?= $post['username'] ?></a></li>
-                                    <li><a href="#"><?= jalaliDate($post['created_at']) ?><span class="lnr lnr-calendar-full"></span></a></li>
+                                    <li><a href="#"><?= $post['created_at'] ?><span class="lnr lnr-calendar-full"></span></a></li>
                                     <li><a href="#"><?= $post['comments_count'] ?><span class="lnr lnr-bubble"></span></a></li>
                                 </ul>
                                <p>
@@ -34,16 +34,16 @@
                                 <div class="comment-sec-area">
                                     <div class="container">
                                         <div class="row flex-column">
-                                            <h6>نظرات</h6>
+                                            <h6>Comment</h6>
                                             <?php foreach ($comments as $comment) { ?>
-                                            <div class="comment-list">
-                                                <div class="single-comment justify-content-between d-flex">
-                                                    <div class="user justify-content-between d-flex">
+                                            <div class="comment-list float-left post-left text-left"">
+                                                <div class="single-comment justify-content-between ">
+                                                    <div class="user justify-content-between ">
 
-                                                        <div class="desc">
+                                                        <div class="desc post-left text-left"">
                                                             <h5><a href="#"><?= $comment['username'] ?></a></h5>
-                                                            <p class="date mt-3"><?= jalaliDate($comment['created_at']) ?></p>
-                                                            <p class="comment">
+                                                            <p class="date mt-3"><?= $comment['created_at'] ?></p>
+                                                            <p class="comment ml-10">
                                                                 <?= $comment['comment'] ?>
                                                             </p>
                                                         </div>
@@ -58,13 +58,13 @@
                             </div>
                             <?php if(isset($_SESSION['user'])) { ?>
                             <div class="comment-form">
-                                <h4>درج نظر جدید</h4>
+                                <h4>Add new comment</h4>
                                 <form action="<?= url('comment-store') ?>" method="post">
                                     <div class="form-group">
                                             <input type="text" value="<?= $id ?>" name="post_id" class="d-none">
-                                        <textarea class="form-control mb-10" rows="5" name="comment" placeholder="متن نظر" onfocus="this.placeholder = ''" onblur="this.placeholder = 'متن نظر'" required=""></textarea>
+                                        <textarea class="form-control mb-10 text-left" rows="5" name="comment" placeholder="text" onfocus="this.placeholder = ''" onblur="this.placeholder = 'text'" required=""></textarea>
                                     </div>
-                                    <button type="submit" class="primary-btn text-uppercase">ارسال</button>
+                                    <button type="submit" class="primary-btn text-uppercase">Send</button>
                                 </form>
                             </div>
                             <?php } ?>

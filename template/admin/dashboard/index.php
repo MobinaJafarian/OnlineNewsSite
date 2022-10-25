@@ -45,8 +45,8 @@ require_once(BASE_PATH . "/template/admin/layouts/head-tag.php");
                     <div class="card-body">
 <!--                        <h5 class="card-title">Info card title</h5>-->
                         <section class="d-flex justify-content-between align-items-center font-12">
-                            <span class=""><i class="far fa-eye-slash"></i> Unseen <span class="badge badge-pill mx-1"><?= $commentsUnseenCount['COUNT(*)']; ?></span></span>
-                            <span class=""><i class="far fa-check-circle"></i> Approved <span class="badge badge-pill mx-1"><?= $commentsApprovedCount['COUNT(*)']; ?></span></span>
+                            <span class=""><i class="fa fa-eye-slash"></i> Unseen <span class="badge badge-pill mx-1"><?= $commentsUnseenCount['COUNT(*)']; ?></span></span>
+                            <span class=""><i class="fa fa-check-circle"></i> Approved <span class="badge badge-pill mx-1"><?= $commentsApprovedCount['COUNT(*)']; ?></span></span>
                         </section>
                     </div>
                 </div>
@@ -71,10 +71,10 @@ require_once(BASE_PATH . "/template/admin/layouts/head-tag.php");
                     </tr>
                     </thead>
                     <tbody>
-                    <?php foreach($postsWithView as $post) {?>
+                    <?php foreach($postsWithView as $key => $post) {?>
                     <tr>
-                        <td><a class="text-primary" href="<?= url('admin/post/show/' . $post['id']) ?>"><?=  $post['id'] ?></a></td>
-                        <td><?=  $post['title'] ?></td>
+                        <td><a class="text-primary" href="<?= url('admin/post') ?>"><?=  $key += 1 ?></a></td>
+                        <td><a class="text-dark" href="<?= url('admin/post') ?>"><?=  $post['title'] ?></a></td>
                         <td><span class="badge badge-secondary"><?=  $post['view'] ?></span></td>
                     </tr>
                     <?php }?>
@@ -98,10 +98,10 @@ require_once(BASE_PATH . "/template/admin/layouts/head-tag.php");
                         </tr>
                     </thead>
                     <tbody>
-                        <?php foreach($postsComments as $post) {?>
+                        <?php foreach($postsComments as $key => $post) {?>
                         <tr>
-                            <td><a class="text-primary" href="<?= url('admin/post/show/' .  $post['id']) ?>"><?=  $post['id'] ?></a></td>
-                            <td><?=  $post['title'] ?></td>
+                            <td><a class="text-primary" href="<?= url('admin/post') ?>"><?=  $key +=1 ?></a></td>
+                            <td><a class="text-dark" href="<?= url('admin/post') ?>"><?=  $post['title'] ?></a></td>
                             <td><span class="badge badge-success"><?=  $post['comment_count'] ?></span></td>
                         </tr>
                         <?php }?>
@@ -125,12 +125,12 @@ require_once(BASE_PATH . "/template/admin/layouts/head-tag.php");
                     </tr>
                     </thead>
                     <tbody>
-                    <?php foreach($lastComments as $comment) {?>
+                    <?php foreach($lastComments as $key => $comment) {?>
 
-                        <tr>
-                            <td><a class="text-primary" href="<?= url('admin/comment/show/' . $comment['id']) ?>"><?=  $comment['id'] ?></a></td>
-                            <td><?=  $comment['username'] ?></td>
-                            <td><?=  $comment['comment'] ?></td>
+                        <tr >
+                            <td><a class="text-primary" href="<?= url('admin/comment') ?>"><?=  $key +=1 ?></a></td>
+                            <td><a class="text-dark" href="<?= url('admin/comment') ?>"><?=  $comment['username'] ?></a></td>
+                            <td><a class="text-dark" href="<?= url('admin/comment') ?>"><?=  $comment['comment'] ?></a></td>
                             <td><span class="badge badge-warning"><?=  $comment['status'] ?></span></td>
                         </tr>
                     <?php }?>

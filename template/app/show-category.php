@@ -1,6 +1,6 @@
-<?php
-require_once(BASE_PATH . "/template/app/layouts/header.php");
-?>
+<?php 
+        require_once(BASE_PATH . '/template/app/layouts/header.php');
+   ?>
 
 <div class="site-main-container">
         <!-- Start top-post Area -->
@@ -9,14 +9,14 @@ require_once(BASE_PATH . "/template/app/layouts/header.php");
                 <div class="row">
                     <div class="col-lg-12">
                         <div class="hero-nav-area">
-                            <h1 class="text-white">اخبار دسته بندی  <?= $category['name'] ?></h1>
+                            <h1 class="text-white"><?= $category['name']  ?> News</h1>
 
                         </div>
                     </div>
                     <?php if(!empty($breakingNews)) { ?>
                     <div class="col-lg-12">
-                        <div class="news-tracker-wrap">
-                            <h6><span>خبر فوری:</span> <a href="<?= url('show-post/' . $breakingNews['id']) ?>"><?= $breakingNews['title'] ?></a></h6>
+                        <div class="news-tracker-wrap text-left">
+                            <h6><span>Breaking News:</span> <a href="<?= url('show-post/' . $breakingNews['id']) ?>"><?= $breakingNews['title'] ?></a></h6>
                         </div>
                     </div>
                     <?php } ?>
@@ -30,8 +30,8 @@ require_once(BASE_PATH . "/template/app/layouts/header.php");
                 <div class="row">
                     <div class="col-lg-8 post-list">
                         <!-- Start latest-post Area -->
-                        <div class="latest-post-wrap">
-                            <h4 class="cat-title">آخرین اخبار</h4>
+                        <div class="latest-post-wrap post-left text-left">
+                            <h4 class="cat-title">Latest Post</h4>
 
                             <?php foreach ($categoryPosts as $categoryPost) {   ?>
                             <div class="single-latest-post row align-items-center">
@@ -44,13 +44,13 @@ require_once(BASE_PATH . "/template/app/layouts/header.php");
                                         <li><a href="<?= url('show-category/' . $categoryPost['cat_id']) ?>"><?= $categoryPost['category'] ?></a></li>
                                     </ul>
                                 </div>
-                                <div class="col-lg-7 post-right">
+                                <div class="col-lg-7 post-left text-left">
                                     <a href="<?= url('show-post/' . $categoryPost['id']) ?>">
                                         <h4><?= $categoryPost['title'] ?></h4>
                                     </a>
                                     <ul class="meta">
                                         <li><a href="#"><span class="lnr lnr-user"></span><?= $categoryPost['username'] ?></a></li>
-                                        <li><a href="#"><?= jalaliDate($categoryPost['created_at']) ?><span class="lnr lnr-calendar-full"></span></a></li>
+                                        <li><a href="#"><?= $categoryPost['created_at'] ?><span class="lnr lnr-calendar-full"></span></a></li>
                                         <li><a href="#"> <?= $categoryPost['comments_count'] ?><span class="lnr lnr-bubble"></span></a></li>
                                     </ul>
                                     <p class="excert">
@@ -72,8 +72,8 @@ require_once(BASE_PATH . "/template/app/layouts/header.php");
                         <?php } ?>
                         <!-- End banner-ads Area -->
                         <!-- Start popular-post Area -->
-                        <div class="popular-post-wrap">
-                            <h4 class="title">اخبار پربازدید</h4>
+                        <div class="popular-post-wrap  post-left text-left">
+                            <h4 class="title">Popular Post</h4>
                             
                             <?php if (isset($popularPosts[0])) { ?>
                             <div class="feature-post relative">
@@ -81,7 +81,7 @@ require_once(BASE_PATH . "/template/app/layouts/header.php");
                                     <div class="overlay overlay-bg"></div>
                                     <img class="img-fluid" src="<?= asset($popularPosts[0]['image']) ?>" alt="">
                                 </div>
-                                <div class="details">
+                                <div class="details  post-left text-left"">
                                     <ul class="tags">
                                         <li><a href="<?= url('show-category/' . $popularPosts[0]['cat_id']) ?>"><?= $popularPosts[0]['category'] ?></a></li>
                                     </ul>
@@ -109,13 +109,13 @@ require_once(BASE_PATH . "/template/app/layouts/header.php");
                                             <li><a href="<?= url('show-category/' . $popularPosts[1]['cat_id']) ?>"><?= $popularPosts[1]['category'] ?></a></li>
                                         </ul>
                                     </div>
-                                    <div class="details">
+                                    <div class="details  post-left text-left"">
                                         <a href="<?= url('show-post/' . $popularPosts[1]['id']) ?>">
                                             <h4><?= $popularPosts[1]['title'] ?></h4>
                                         </a>
                                         <ul class="meta">
                                             <li><a href="#"><span class="lnr lnr-user"></span><?= $popularPosts[1]['username'] ?></a></li>
-                                            <li><a href="#"><?= jalaliDate($popularPosts[1]['created_at']) ?><span class="lnr lnr-calendar-full"></span></a></li>
+                                            <li><a href="#"><?= $popularPosts[1]['created_at'] ?><span class="lnr lnr-calendar-full"></span></a></li>
                                             <li><a href="#"> <?= $popularPosts[1]['comments_count'] ?><span class="lnr lnr-bubble"></span></a></li>
                                         </ul>
                                         <p class="excert">
@@ -135,13 +135,13 @@ require_once(BASE_PATH . "/template/app/layouts/header.php");
                                             <li><a href="<?= url('show-category/' . $popularPosts[2]['cat_id']) ?>"><?= $popularPosts[2]['category'] ?></a></li>
                                         </ul>
                                     </div>
-                                    <div class="details">
+                                    <div class="details post-left text-left"">
                                         <a href="<?= url('show-post/' . $popularPosts[2]['id']) ?>">
                                             <h4><?= $popularPosts[2]['title'] ?></h4>
                                         </a>
                                         <ul class="meta">
                                             <li><a href="#"><span class="lnr lnr-user"></span><?= $popularPosts[2]['username'] ?></a></li>
-                                            <li><a href="#"><?= jalaliDate($popularPosts[2]['created_at']) ?><span class="lnr lnr-calendar-full"></span></a></li>
+                                            <li><a href="#"><?= $popularPosts[2]['created_at'] ?><span class="lnr lnr-calendar-full"></span></a></li>
                                             <li><a href="#"><?= $popularPosts[2]['comments_count'] ?><span class="lnr lnr-bubble"></span></a></li>
                                         </ul>
                                         <p class="excert">

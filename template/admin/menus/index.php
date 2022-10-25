@@ -37,7 +37,7 @@
                     <?= $menu['url'] ?>
                     </td>
                     <td>
-                    <?= $menu['parent_id'] == null ? 'منوی اصلی' : $menu['parent_name'] ?>
+                    <?= $menu['parent_id'] == null ? 'main menu' : $menu['parent_name'] ?>
                     </td>
                     <td>
                 <a role="button" class="btn btn-sm btn-primary text-white" href="<?= url('admin/menu/edit/'.$menu['id']) ?>">edit</a>
