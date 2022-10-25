@@ -81,7 +81,7 @@
                         <span class="txt1">
                             Forgot
                         </span>
-                        <a class="txt2" href="#">
+                        <a class="txt2" href="<?= url('forgot') ?>">
                             Username / Password?
                         </a>
                     </div>

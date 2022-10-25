@@ -26,7 +26,7 @@ require_once BASE_PATH . '/template/admin/layouts/head-tag.php';
                     <label for="parent_id">parent ID</label>
                     <select name="parent_id" id="parent_id" class="form-control" autofocus>
 
-                    <option value="">منوی اصلی</option>
+                    <option value="">main menu</option>
 
                     <?php foreach($menus as $menu) { ?>
                         <option value="<?= $menu['id'] ?>">
