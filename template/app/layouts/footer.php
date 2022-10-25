@@ -21,8 +21,8 @@
                 <div class="col-lg-4 col-md-4 single-footer-widget text-left">
                     <h4>Contact us</h4>
                     <ul>
-                            <li><a href=""><span class="lnr lnr-phone-handset"></span><span>  0903 958 2466</span></a></li>
-                            <li><a href=""><span class="lnr lnr-envelope"></span><span>  nimobina99@gmail.com</span></a></li>
+                            <li><a href=""><span class="lnr lnr-phone-handset"></span><span>  +1 958-787-1176</span></a></li>
+                            <li><a href=""><span class="lnr lnr-envelope"></span><span>  admin@onlinenews.com</span></a></li>
                     </ul>
                 </div>
             </div>
