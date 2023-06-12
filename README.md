@@ -65,17 +65,17 @@ List the ready features here:
 8. after creating database name click on import.
 
 9. browse the file in directory
-[NewsProject/database/news-project.sql].
+[OnlineNewsSite/database/news-project.sql].
 
 10. after importing successfully.
 
-11. open any browser and type http://localhost/NewsProject/
+11. open any browser and type http://localhost/OnlineNewsSite/
 
 12. first register and then login
 
 13. admin login details: 
-- Email=nj@gmail.com and 
-- Password=19991999
+- Email=onlinenewssite@admin.com and 
+- Password=123456789
 
 
 
