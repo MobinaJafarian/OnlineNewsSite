@@ -5,7 +5,7 @@ namespace Database;
 use Exception;
 use PDO;
 
-class Database
+class DataBase
 {
 
     private $connection;

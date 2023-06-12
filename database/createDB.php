@@ -1,8 +1,8 @@
 <?php
 
-use Database\Database;
+use Database\DataBase;
 
-class CreateDB extends Database
+class CreateDB extends DataBase
 {
 
     private $queries = [

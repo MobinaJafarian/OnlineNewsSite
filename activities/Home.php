@@ -2,13 +2,13 @@
 
 namespace App;
 
-use Database\Database;
+use Database\DataBase;
 
 class Home{
 
         public function index()
         {
-                $db = new Database();
+                $db = new DataBase();
 
                 $setting = $db->select('SELECT * FROM websetting')->fetch();
 
@@ -35,7 +35,7 @@ class Home{
         public function show($id)
         {
 
-                $db = new Database();
+                $db = new DataBase();
 
 
                 $post =$db->select('SELECT posts.*, (SELECT COUNT(*) FROM comments WHERE comments.post_id = posts.id) AS comments_count, (SELECT username FROM users WHERE users.id = posts.user_id) AS username, (SELECT name FROM categories WHERE categories.id = posts.cat_id) AS category FROM posts WHERE id = ?', [$id])->fetch();
@@ -67,7 +67,7 @@ class Home{
                 {
                         if($_SESSION['user'] != null)
                         {
-                                $db = new Database();
+                                $db = new DataBase();
                                 $db->insert('comments', ['user_id', 'post_id', 'comment'], [$_SESSION['user'], $request['post_id'], $request['comment']]);
                                 $this->redirectBack();
                         }

@@ -2,7 +2,7 @@
 
 namespace Admin;
 
-use database\Database;
+use database\DataBase;
 
 class Comment extends Admin{ 
         

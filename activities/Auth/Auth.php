@@ -2,7 +2,7 @@
 
 namespace Auth;
 
-use Database\Database;
+use Database\DataBase;
 use PHPMailer\PHPMailer\Exception;
 use PHPMailer\PHPMailer\PHPMailer;
 
@@ -93,7 +93,7 @@ class Auth
             flash('register_error', 'The email entered is not valid');
             $this->redirectBack();
         } else {
-            $db = new Database();
+            $db = new DataBase();
             $user = $db->select("SELECT * FROM users WHERE email = ?", [$request['email']])->fetch();
             if ($user != null) {
                 flash('register_error', 'Email already exists');
@@ -120,7 +120,7 @@ class Auth
 
     public function activation($verifyToken)
     {
-        $db = new Database();
+        $db = new DataBase();
         $user = $db->select("SELECT * FROM users WHERE verify_token = ? AND is_active = 0", [$verifyToken])->fetch();
         if ($user == null) {
             $this->redirect('login');
@@ -141,7 +141,7 @@ class Auth
             flash('login_error', 'All fields are required');
             $this->redirectBack();
         } else {
-            $db = new Database();
+            $db = new DataBase();
             $user = $db->select("SELECT * FROM users WHERE email = ?", [$request['email']])->fetch();
             if ($user != null) {
                 if (password_verify($request['password'], $user['password']) && $user['is_active'] == 1) {
@@ -162,7 +162,7 @@ class Auth
     public function checkAdmin()
     {
         if (isset($_SESSION['user'])) {
-            $db = new Database();
+            $db = new DataBase();
             $user = $db->select("SELECT * FROM users WHERE id = ?", [$_SESSION['user']])->fetch();
             if ($user != null) {
                 if ($user['permission'] != 'admin') {
@@ -211,7 +211,7 @@ class Auth
             flash('forgot_error', 'The entered email is not correct');
             $this->redirectBack();
         } else {
-            $db = new Database();
+            $db = new DataBase();
             $user = $db->select("SELECT * FROM users WHERE email = ?", [$request['email']])->fetch();
             if ($user == null) {
                 flash('forgot_error', 'There is no email entered');
@@ -243,7 +243,7 @@ class Auth
             flash('reset_error', 'The password must not be less than 8 characters or the password must not be empty');
             $this->redirectBack();
         } else {
-            $db = new Database();
+            $db = new DataBase();
             $user = $db->select("SELECT * FROM users WHERE forgot_token = ?", [$forgot_token])->fetch();
             if ($user == null) {
                 flash('reset_error', 'User with this profile was not found');

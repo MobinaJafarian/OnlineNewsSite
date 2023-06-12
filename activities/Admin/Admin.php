@@ -5,6 +5,7 @@ namespace Admin;
 use Auth\Auth;
 
 
+
 class Admin{
 
         function __construct(){
