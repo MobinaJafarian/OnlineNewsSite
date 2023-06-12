@@ -40,7 +40,7 @@ CREATE TABLE `banners` (
 --
 
 INSERT INTO `banners` (`id`, `image`, `url`, `created_at`, `updated_at`) VALUES
-(8, 'public/banner-image/2022-10-24-23-19-09.jpeg', 'http://localhost/NewsProject/', '2022-10-24 14:19:09', NULL);
+(8, 'public/banner-image/2022-10-24-23-19-09.jpeg', 'http://localhost/OnlineNewsSite/', '2022-10-24 14:19:09', NULL);
 
 -- --------------------------------------------------------
 
@@ -114,8 +114,8 @@ CREATE TABLE `menus` (
 
 INSERT INTO `menus` (`id`, `name`, `url`, `parent_id`, `created_at`, `updated_at`) VALUES
 (9, 'most visited', '#', NULL, '2019-07-17 12:05:11', '2022-10-24 11:33:11'),
-(12, 'about us ', 'http://localhost/NewsProject/', NULL, '2022-10-24 14:38:39', NULL),
-(13, 'Home', 'http://localhost/NewsProject/', NULL, '2022-10-24 14:39:03', NULL);
+(12, 'about us ', 'http://localhost/OnlineNewsSite/', NULL, '2022-10-24 14:38:39', NULL),
+(13, 'Home', 'http://localhost/OnlineNewsSite/', NULL, '2022-10-24 14:39:03', NULL);
 
 -- --------------------------------------------------------
 
