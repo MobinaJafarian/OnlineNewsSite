@@ -10,8 +10,8 @@ define('BASE_PATH', __DIR__);
 define('CURRENT_DOMAIN', current_domain() . '/OnlineNewsSite/');
 define('DB_HOST', 'localhost');
 define('DB_NAME', 'news-project');
-define('DB_USERNAME', 'mobina');
-define('DB_PASSWORD', '1999');
+define('DB_USERNAME', 'root');
+define('DB_PASSWORD', '');
 define('DISPLAY_ERROR', true);
 
 //mail config
