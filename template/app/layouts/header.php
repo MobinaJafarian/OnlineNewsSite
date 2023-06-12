@@ -57,7 +57,7 @@
             <div class="container">
                 <div class="row justify-content-between align-items-center">
                     <div class="col-lg-4 col-md-4 col-sm-12 logo-left no-padding">
-                        <a href="http://localhost/NewsProject/">
+                        <a href="http://localhost/OnlineNewsSite/">
                             <img class="img-fluid" src="<?=asset($setting['logo'])?>" alt="">
                         </a>
                     </div>
