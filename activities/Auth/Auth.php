@@ -32,15 +32,16 @@ class Auth
         return bin2hex(openssl_random_pseudo_bytes(32));
     }
 
-//     public function activationMessage($username, $verifyToken)
-//     {
-//         $message = '
-//                     <h1>Account activation</h1>
-//                     <p>' . $username . Dear, to activate your account, please click on the link below'</p>
-//                     <div><a href="' . url('activation/' . $verifyToken) . '">Account activation</a></div>
-//                     ';
-//         return $message;
-//     }
+    public function activationMessage($username, $verifyToken)
+    {
+        $message = "
+                    <h1>Account activation</h1>
+                    <h4>Dear $username</h4>
+                    <p>to activate your account, please click on the link below</p>
+                    <div><a href=" . url('activation/' . $verifyToken) . ">Account activation</a></div>
+                    ";
+        return $message;
+    }
 
     public function sendMail($emailAddress, $subject, $body)
     {
@@ -100,19 +101,18 @@ class Auth
                 $this->redirectBack();
             } else {
                 $randomToken = $this->random();
-                //      $activationMessage = $this->activationMessage($request['username'], $randomToken);
-                //      $result = $this->sendMail($request['email'], 'Account activation', $activationMessage);
-                //      if($result)
-                //      {
-                $request['verify_token'] = $randomToken;
-                $request['password'] = $this->hash($request['password']);
-                $db->insert('users', array_keys($request), $request);
-                $this->redirect('login');
-                //      }
+                $activationMessage = $this->activationMessage($request['username'], $randomToken);
+                $result = $this->sendMail($request['email'], 'Account activation', $activationMessage);
+                if ($result) {
+                    $request['verify_token'] = $randomToken;
+                    $request['password'] = $this->hash($request['password']);
+                    $db->insert('users', array_keys($request), $request);
+                    $this->redirect('login');
+                }
 
             }
 
-            // flash('register_error', 'The activation email was not sent');
+            flash('register_error', 'The activation email was not sent');
             $this->redirectBack();
 
         }
