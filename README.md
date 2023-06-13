@@ -56,6 +56,9 @@ List the ready features here:
     
 4. extract files in C:\\xampp\htdocs\.
 
+> **Note** <br>
+>  The project name must be `OnlineNewsSite`
+
 5. open link localhost/phpmyadmin
 
 6. click on new at side navbar.
