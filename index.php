@@ -15,13 +15,13 @@ define('DB_PASSWORD', '');
 define('DISPLAY_ERROR', true);
 
 //mail config
-define('MAIL_HOST', 'smtp.gmail.com');
-define('SMTP_AUTH', true);
-define('MAIL_USERNAME', '');
-define('MAIL_PASSWORD', '');
+define('MAIL_HOST', 'sandbox.smtp.mailtrap.io');
+define('SMTP_AUTH', 'LOGIN');
+define('MAIL_USERNAME', 'yourMailUsername');
+define('MAIL_PASSWORD', 'yourMailPassword');
 define('MAIL_PORT', 587);
-define('SENDER_MAIL', '');
-define('SENDER_NAME', 'Mobina nj');
+define('SENDER_MAIL', 'onlinenewssite@admin.com');
+define('SENDER_NAME', 'admin');
 
 //database
 require_once 'database/DataBase.php';
