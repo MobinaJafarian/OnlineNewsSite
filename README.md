@@ -78,6 +78,12 @@ List the ready features here:
 - Password=123456789
 
 
+> **Note** <br>
+> Don't forget to configure your database information in the `index.php`
+
+
+> And also mail configuration in the `index.php`  ( I used [mailtrap](https://mailtrap.io/) )
+
 
 
 ## Project Status
