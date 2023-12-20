@@ -8,6 +8,8 @@ use Auth\Auth;
 
 class Admin{
 
+    protected $currentDomain;
+    protected $basePath;
         function __construct(){
                 $auth = new Auth();
                 $auth->checkAdmin();
