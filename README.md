@@ -76,9 +76,9 @@ List the ready features here:
 
 12. first register and then login
 
-13. admin login details: 
-- Email=onlinenewssite@admin.com and 
-- Password=123456789
+13. Admin account details for login:
+- Email: `onlinenewssite@admin.com and`
+- Password: `123456789`
 
 
 > **Note** <br>
